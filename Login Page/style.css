@@ -1,0 +1,150 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+}
+body::before{
+	content: "";
+	position: absolute;
+height: 100%;
+width: 100%;
+background: url(./Images/Vine.jpg);
+background-size: cover;
+background-position: center;
+}
+.login,.signup{
+	width: 400px;
+	border-radius: 8px;
+	padding: 24px;
+	text-align: center;
+	border: 1px solid rgba(255,255,255,0.5);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+form{
+	display: flex;
+	flex-direction: column;
+}
+h1{
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: #fff;
+}
+.inputfield{
+	position: relative;
+	border-bottom: 2px solid #fff;
+	margin: 15px 0;
+}
+.inputfield label{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	color: #fff;
+	pointer-events: none;
+	font-size: 17px;
+	transition: 0.15s ease;
+}
+.inputfield input{
+	color: #fff;
+	border: none;
+	outline: none;
+	font-size: 17px;
+	background: transparent;
+	height: 40px;
+	width: 100%;
+}
+.inputfield input:focus~label,
+.inputfield input:valid~label{
+	font-size: 0.9rem;
+	top: 10px;
+	transform: translateY(-120%);
+}
+.forgetpassword{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 25px 0 35px 0;
+	color: #fff;
+
+}
+#remember{
+	accent-color: #fff;
+}
+.forgetpassword label{
+	display: flex;
+	justify-content: center;
+}
+.forgetpassword label p{
+	margin-left: 8px;
+}
+.login a,.signup a{
+	color: #efefef;
+	text-decoration: none;
+}
+.login a:hover,.signup a:hover{
+text-decoration: underline;
+}
+.signup-btn, .login-btn{
+
+	border-radius: 4px;
+	background: #fff;
+	font-size: 17px;
+	font-weight: 500;
+	cursor: pointer;
+	color: #000;
+	border: 2px solid transparent;
+	padding: 12px 20px;
+	transition: 0.3s ease;
+
+}
+button:hover{
+	border-color: #fff;
+	color: #fff;
+	background: rgba(255,255,255,0.15);
+}
+.register{
+	text-align: center;
+	margin-top: 30px;
+	color: #fff;
+}
+.inputfield input:is(:focus, :valid) ~ #toggle-icon{
+    color: #fff;
+}
+#toggle-icon{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+#toggle-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+#fullnamemsg,#emailmsg,#passwordMsg{
+	display: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 17px;
+	font-weight: 200;
+}
+.btn{
+	background: transparent;
+	border: none;
+	height: 43px;
+	width: 43px;
+	position: absolute;
+	right: 10px;
+	border-radius: 50%;
+}

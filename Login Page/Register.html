@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./Asset/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="signup animate__animated animate__zoomIn">
+            <form name="RegForm" onsubmit="Register(event)" autocomplete="off">
+                <h1>Registration</h1>
+                <div class="inputfield">
+                    <input type="text"  name="fullname" oninput="onInputValid(this,'fullnamemsg')"/>
+                    <label>Enter Name</label>
+                    <p id="fullnamemsg"></p> 
+                </div>
+                <div class="inputfield">
+                    <input type="text" name="email" oninput="onInputValid(this,'emailmsg')"/>
+                    <label>Enter Email</label>
+                    <p id="emailmsg"></p> 
+                </div>
+                <div class="inputfield">
+                    <input type="password" id="Password" name="password" oninput="onInputValid(this,'passwordMsg')" />
+                    <label>Enter Password</label>
+                    <button type="button" class="btn" onclick="togglepassword('Password','toggle-icon')">
+                        <i class="fa fa-eye" id="toggle-icon"></i></button>
+                    <p id="passwordMsg"></p>  
+                </div>
+                <div class="inputfield">
+                    <input type="password"  id="confirmPassword" name="cpassword" oninput="onInputValid(this,'cpasswordMsg')"/>
+                    <label>Enter confirm Password</label>
+                    <button type="button" class="btn" onclick="togglepassword('confirmPassword','toggle-icon')">
+                    <i class="fa fa-eye" id="toggle-icon"></i></button>
+                    <p id="cpasswordMsg"></p>  
+                </div>
+                <div class="forgetpassword">
+					<label for="remember">
+						<input type="checkbox" required/>
+						<p>I accept all terms & condition</p>
+					</label>
+				</div>
+                    <button type="submit" class="signup-btn">Register</button>
+                    <div class="register">
+                        <p>Already? have an account?<a href="./login.html">Login</a></p>
+                    </div>
+            </form>
+        </div>
+    </div>
+        <script src="./Javscript/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

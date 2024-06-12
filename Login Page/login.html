@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="./Asset/style.css" rel="stylesheet" />
+    <script src="./Javscript/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login animate__animated animate__zoomIn">
+        <form name="LoginForm" onsubmit="Login(event)" autocomplete="off">
+          <h1>Login</h1>
+          <div class="inputfield">
+            <input
+              type="text"
+              name="email"
+              oninput="onInputValid(this,'emailmsg')"
+            />
+            <label>Enter Your Email</label>
+            <p id="emailmsg"></p>
+          </div>
+          <div class="inputfield">
+            <input
+              type="password"
+              id="Password"
+              name="password"
+              oninput="onInputValid(this,'passwordMsg')"
+            />
+            <label>Enter Your Password</label>
+            <button
+              type="button" class="btn"
+              onclick="togglepassword('Password','toggle-icon')"
+            >
+              <i class="fa fa-eye" id="toggle-icon"></i>
+            </button>
+            <p id="passwordMsg"></p>
+          </div>
+          <div class="forgetpassword">
+            <label for="remember">
+              <input type="checkbox" required />
+              <p>Remember me</p>
+            </label>
+            <a href="#">Forget Password?</a>
+          </div>
+          <button type="submit" onsubmit="welcome()" class="login-btn">Log In</button>
+          <div class="register">
+            <p>Don't have an account?<a href="./Register.html">Register</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
